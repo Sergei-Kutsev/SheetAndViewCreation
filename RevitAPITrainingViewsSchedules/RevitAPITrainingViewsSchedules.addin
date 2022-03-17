@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+	<AddIn Type="Command">
+		<Assembly>RevitAPITrainingViewsSchedules.dll</Assembly>
+		<AddInId>A0E891C2-3405-4405-806E-8DFF927150B7</AddInId>
+		<FullClassName>RevitAPITrainingViewsSchedules.Main</FullClassName>
+		<VendorId>ADSK</VendorId>
+		<Text>Создать листы с видами</Text>
+	</AddIn>
+</RevitAddIns>

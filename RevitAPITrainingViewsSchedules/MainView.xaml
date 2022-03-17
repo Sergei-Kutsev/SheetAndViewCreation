@@ -1,0 +1,48 @@
+﻿<Window x:Class="RevitAPITrainingViewsSchedules.MainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:RevitAPITrainingViewsSchedules"
+             mc:Ignorable="d" 
+             Height="350" Width="300"
+        Title="Добавление фильтра к спецификации">
+    <StackPanel>
+        <Label Content="Выбрать формат листа" 
+               Margin="5"/>
+
+        <ComboBox ItemsSource="{Binding SheetsTitles}"
+                  SelectedValue="{Binding SelectedSheetTitle}"
+                  DisplayMemberPath="Name"
+                  Margin="5"/>
+        <!--DisplayMemberPath="Name" - обращаемся к свойству Name плана этажа,
+        который мы видим в ревите-->
+        <Label Content="Выбрать создаваемый вид для листов" 
+               Margin="5"/>
+
+        <ComboBox ItemsSource="{Binding AllViewsInModel}"
+                  SelectedValue="{Binding SelectedView}"
+                  DisplayMemberPath="Name"
+                  Margin="5"/>
+                         
+        <!--DisplayMemberPath="Name" - обращаемся к свойству Name видов,
+        которые мы видим в ревите-->
+
+        <Label Content="Количество создаваемых листов"
+                Margin="5"/>
+        
+        <TextBox Text="{Binding NumberOfSheets}"
+                  Margin="5"/>
+        
+        <Label Content="Автор листа"
+                Margin="5"/>
+
+        <TextBox Text="{Binding DesignedByAuthor}"
+                  Margin="5"/>
+        
+        <Button Content="Создать"
+        Command="{Binding CreateSheets}"
+                Margin="5"
+                Padding="5"/>
+    </StackPanel>
+</Window>
